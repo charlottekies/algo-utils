@@ -2,9 +2,9 @@ name: Deploy to GitHub Packages
 
 on:
   push:
-    tags:
-      - 'AlgoUtils-*'  # Trigger the workflow on tag pushes
-
+    # Pattern matched against refs/tags
+    tags:        
+      - '*'   
 jobs:
   deploy:
     runs-on: ubuntu-latest
