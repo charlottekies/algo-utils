@@ -17,8 +17,8 @@ jobs:
       - name: Set up JDK 22
         uses: actions/setup-java@v2
         with:
-          java-version: '22'  # Set this to Java 22
-          distribution: 'adoptopenjdk'
+          java-version: '17'
+          distribution: 'adoptopenjdk' 
 
       - name: Build with Maven
         run: mvn clean install
