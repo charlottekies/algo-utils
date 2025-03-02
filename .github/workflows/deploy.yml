@@ -3,7 +3,7 @@ name: Deploy to GitHub Packages
 on:
   push:
     tags:
-      - 'v*'  # Trigger the workflow on tag pushes
+      - 'AlgoUtils-'  # Trigger the workflow on tag pushes
 
 jobs:
   deploy:
