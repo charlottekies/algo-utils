@@ -61,18 +61,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>central</id> &lt;!&ndash; This id must match the id in settings.xml &ndash;&gt;-->
-<!--            <name>Central Repository</name>-->
-<!--            <url>https://repo.maven.apache.org/maven2</url>-->
-<!--        </repository>-->
-<!--        <snapshotRepository>-->
-<!--            <id>central</id> &lt;!&ndash; This is for SNAPSHOT versions &ndash;&gt;-->
-<!--            <name>Central Snapshot Repository</name>-->
-<!--            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
-<!--        </snapshotRepository>-->
-<!--    </distributionManagement>-->
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>  <!-- This should match the id in settings.xml -->
+            <name>Sonatype Staging Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url> <!-- For release versions -->
+        </repository>
+        <snapshotRepository>
+            <id>ossrh</id>  <!-- This is for snapshot versions -->
+            <name>Sonatype Snapshot Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url> <!-- For snapshot versions -->
+        </snapshotRepository>
+    </distributionManagement>
 
 
 
