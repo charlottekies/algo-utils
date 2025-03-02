@@ -62,18 +62,18 @@
     </properties>
 
 
-    <distributionManagement>
-        <repository>
-            <id>central</id>  <!-- This should match the id in settings.xml -->
-            <name>Sonatype Staging Repository</name>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url> <!-- For release versions -->
-        </repository>
-        <snapshotRepository>
-            <id>ossrh</id>  <!-- This is for snapshot versions -->
-            <name>Sonatype Snapshot Repository</name>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url> <!-- For snapshot versions -->
-        </snapshotRepository>
-    </distributionManagement>
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>central</id>  &lt;!&ndash; This should match the id in settings.xml &ndash;&gt;-->
+<!--            <name>Sonatype Staging Repository</name>-->
+<!--            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url> &lt;!&ndash; For release versions &ndash;&gt;-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>ossrh</id>  &lt;!&ndash; This is for snapshot versions &ndash;&gt;-->
+<!--            <name>Sonatype Snapshot Repository</name>-->
+<!--            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url> &lt;!&ndash; For snapshot versions &ndash;&gt;-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
 
 
 
