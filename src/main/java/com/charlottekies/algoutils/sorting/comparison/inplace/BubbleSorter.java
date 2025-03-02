@@ -6,6 +6,11 @@ import java.text.Collator;
 import java.util.*;
 
 public class BubbleSorter extends Sorter {
+    /**
+     *
+     * @param arr an array of ints
+     * @return an array of ints sorted smallest to largest.
+     */
     @Override
     public int[] sort(int[] arr) {
         Integer[] comparableArr = Arrays.stream(arr).boxed().toArray(Integer[]::new);
@@ -13,8 +18,23 @@ public class BubbleSorter extends Sorter {
         return Arrays.stream(sortedIntegers).mapToInt(Integer::intValue).toArray();
     }
 
+    /**
+     *
+     * @param arr an array of strings
+     * @return an array of strings sorted a to z, with numbers sorted before letters.
+     */
     @Override
     public String[] sort(String[] arr) {
+        return bubbleSort(arr);
+    }
+
+    /**
+     *
+     * @param arr an array of Integers
+     * @return an array of Integers sorted smallest to largest.
+     */
+    @Override
+    public Integer[] sort(Integer[] arr) {
         return bubbleSort(arr);
     }
 

@@ -34,4 +34,15 @@ class BubbleSorterTest {
         assertArrayEquals(new String[]{"1", "2", "3", "4"}, bubbleSorter.sort(new String[]{"2", "3", "1", "4"}));
         assertArrayEquals(new String[]{"DOG", "Dog", "dog", "Elephant"}, bubbleSorter.sort(new String[]{"Elephant", "dog", "Dog", "DOG"}));
     }
+
+    @Test
+    void sortIntegers() {
+        assertArrayEquals(new Integer[]{1, 2, 3, 4, 5}, bubbleSorter.sort(new Integer[]{3, 2, 1, 5, 4}));
+        assertArrayEquals(new Integer[]{}, bubbleSorter.sort(new Integer[]{}));
+        assertArrayEquals(new Integer[]{-3,-2,-1}, bubbleSorter.sort(new Integer[]{-3,-2,-1}));
+        assertArrayEquals(new Integer[]{-3,-2,-1}, bubbleSorter.sort(new Integer[]{-1,-2,-3}));
+        assertArrayEquals(new Integer[]{-1,-1,-1}, bubbleSorter.sort(new Integer[]{-1,-1,-1}));
+        assertArrayEquals(new Integer[]{0}, bubbleSorter.sort(new Integer[]{0}));
+    }
+
 }

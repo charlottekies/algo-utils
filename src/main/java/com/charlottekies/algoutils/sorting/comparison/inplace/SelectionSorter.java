@@ -32,6 +32,16 @@ public class SelectionSorter extends Sorter {
         return selectionSort(arr);
     }
 
+    /**
+     *
+     * @param arr an array of Integers
+     * @return an array of Integers sorted smallest to largest.
+     */
+    @Override
+    public Integer[] sort(Integer[] arr) {
+        return selectionSort(arr);
+    }
+
     private <T extends Comparable<T>> T[] selectionSort(T[] array) {
         for (int i = 0; i <= array.length-2; i++) {
             int indexOfSmallerT = i;
