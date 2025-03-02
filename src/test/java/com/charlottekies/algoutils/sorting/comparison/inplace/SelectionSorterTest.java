@@ -1,6 +1,5 @@
 package com.charlottekies.algoutils.sorting.comparison.inplace;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -26,6 +25,11 @@ class SelectionSorterTest {
     }
 
     @Test
-    void testStrings() {
+    void sortStrings() {
+        assertArrayEquals(new String[]{"cat", "dog", "elephant"}, selectionSorter.sort(new String[]{"elephant", "cat", "dog"}));
+        assertArrayEquals(new String[]{"1", "dog", "elephant"}, selectionSorter.sort(new String[]{"elephant", "1", "dog"}));
+        assertArrayEquals(new String[]{"1", "dog", "elep1hant", "elephant"}, selectionSorter.sort(new String[]{"elephant", "elep1hant", "1", "dog"}));
+        assertArrayEquals(new String[]{"1", "2", "3", "4"}, selectionSorter.sort(new String[]{"2", "3", "1", "4"}));
+        assertArrayEquals(new String[]{"DOG", "Dog", "dog", "Elephant"}, selectionSorter.sort(new String[]{"Elephant", "dog", "Dog", "DOG"}));
     }
 }

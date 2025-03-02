@@ -36,8 +36,20 @@ public class SelectionSorter extends Sorter {
         for (int i = 0; i <= array.length-2; i++) {
             int indexOfSmallerT = i;
             for (int j = i+1; j <= array.length-1; j++) {
-                if (array[j].compareTo(array[indexOfSmallerT]) < 0) {
-                    indexOfSmallerT = j;
+                if (array[j] instanceof String) {
+                    String str1 = (String) array[j];
+                    String str2 = (String) array[indexOfSmallerT];
+                    if (str1.compareToIgnoreCase(str2) == 0) {
+                        if (str1.compareTo(str2) < 0) {
+                            indexOfSmallerT = j;
+                        }
+                    } else if (str1.compareToIgnoreCase(str2) < 0) {
+                        indexOfSmallerT = j;
+                    }
+                } else {
+                    if (array[j].compareTo(array[indexOfSmallerT]) < 0) {
+                        indexOfSmallerT = j;
+                    }
                 }
             }
             array = swap(array, i, indexOfSmallerT);
