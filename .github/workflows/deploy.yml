@@ -10,15 +10,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+  steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 22
+      uses: actions/setup-java@v4
+      with:
+        java-version: '22'
+        distribution: 'temurin'
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
 
-      - name: Set up JDK 22
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'
-          distribution: 'adoptopenjdk' 
 
       - name: Build with Maven
         run: mvn clean install
