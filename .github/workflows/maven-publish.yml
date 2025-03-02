@@ -4,9 +4,11 @@
 name: Maven Package
 
 on:
-  release:
-    types: [created]
-  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'  # This will trigger on tags like 'v1.0.0'
+  workflow_dispatch:   # This allows the workflow to be manually triggered via API
+
 
 jobs:
   build:
