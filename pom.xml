@@ -37,7 +37,7 @@
             developerConnection is used by e.g. maven-release-plugin to push changes to the repo.
         -->
         <developerConnection>scm:git:ssh://git@github.com:/charlottekies/algo-utils.git</developerConnection>
-        <tag>AlgoUtils-1.0</tag>
+        <tag>AlgoUtils-1.1</tag>
     </scm>
 
     <issueManagement>
