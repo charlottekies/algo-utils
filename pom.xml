@@ -99,22 +99,6 @@
 
     <profiles>
         <profile>
-
-            <distributionManagement>
-                <!-- Release Repository (Used for release versions) -->
-                <repository>
-                    <id>central</id>  <!-- This ID should match the 'id' in settings.xml -->
-                    <name>Sonatype Staging Repository</name>
-                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-
-                <!-- Snapshot Repository (Used for snapshot versions) -->
-                <snapshotRepository>
-                    <id>ossrh</id>  <!-- This ID should match the 'id' in settings.xml -->
-                    <name>Sonatype Snapshot Repository</name>
-                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-                </snapshotRepository>
-            </distributionManagement>
             <id>release</id>
             <build>
                 <plugins>
