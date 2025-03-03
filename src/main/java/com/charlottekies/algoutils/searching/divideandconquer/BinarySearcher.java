@@ -1,10 +1,16 @@
 package com.charlottekies.algoutils.searching.divideandconquer;
 
 import com.charlottekies.algoutils.searching.Searcher;
+import com.charlottekies.algoutils.sorting.comparison.inplace.BubbleSorter;
 
 import java.util.Arrays;
 
 public class BinarySearcher extends Searcher {
+    private BubbleSorter bubbleSorter;
+
+    public BinarySearcher(BubbleSorter bubbleSorter) {
+        this.bubbleSorter = bubbleSorter;
+    }
 
     /**
      * <p>
@@ -46,22 +52,66 @@ public class BinarySearcher extends Searcher {
         return 0;
     }
 
+    /**
+     * <p>
+     *     Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
+     * </p>
+     * @param strs an array of Strings to search
+     * @param target the String to search for
+     * @return true if exists, otherwise, false
+     */
     @Override
     public boolean includes(String[] strs, String target) {
         return false;
     }
 
+    /**
+     * <p>
+     *     Implements a binary search algorithm to perform a search for a given target in an array of ints.
+     * </p>
+     * @param nums an array of ints to search
+     * @param target the int to search for
+     * @return true if exists, otherwise, false
+     */
     @Override
     public boolean includes(int[] nums, int target) {
         return false;
     }
 
+    /**
+     * <p>
+     *     Implements a binary search algorithm to perform a search for a given target in an array of Integers.
+     * </p>
+     * @param nums an array of Integers to search
+     * @param target the Integer to search for
+     * @return true if exists, otherwise, false
+     */
     @Override
     public boolean includes(Integer[] nums, Integer target) {
-        return false;
+        bubbleSorter.sort(nums);
+        return binaryIncludes(nums, target);
     }
 
     private <T extends Comparable<T>> int binarySearch(T[] arr, T target) {
         return 0;
     }
+
+    private <T extends Comparable<T>> boolean binaryIncludes(T[] arr, T target) {
+        int lowerBound = 0;
+        int upperBound = arr.length-1;
+
+        while (lowerBound <= upperBound) {
+            int midpoint = (lowerBound + upperBound) / 2;
+
+            if (arr[midpoint].compareTo(target) == 0) {
+                return true;
+            } else if (arr[midpoint].compareTo(target) < 0) {
+                lowerBound = midpoint+1;
+            } else {
+                upperBound = midpoint -1;
+            }
+        }
+        return false;
+    }
+
 }

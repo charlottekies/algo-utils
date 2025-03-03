@@ -1,5 +1,6 @@
 package com.charlottekies.algoutils.searching.divideandconquer;
 
+import com.charlottekies.algoutils.sorting.comparison.inplace.BubbleSorter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,10 +9,12 @@ import static org.junit.Assert.assertEquals;
 class BinarySearcherTest {
 
     private BinarySearcher binarySearcher;
+    private BubbleSorter bubbleSorter;
 
     @BeforeEach
     void setUp() {
-        binarySearcher = new BinarySearcher();
+        this.bubbleSorter = new BubbleSorter();
+        binarySearcher = new BinarySearcher(bubbleSorter);
     }
 
     @Test
@@ -71,9 +74,9 @@ class BinarySearcherTest {
 
     @Test
     void testIncludesInteger() {
-        boolean result = binarySearcher.includes(new Integer[]{-1, 1, 2, 4, 4, 5, 8, 8, 32}, 1);
+        boolean result = binarySearcher.includes(new Integer[]{-1, 4, 4, 2, 1, 5, 8, 8, 32}, 1);
         assertEquals(true, result);
-        result =  binarySearcher.includes(new Integer[]{-1, 1, 2, 4, 4, 5, 8, 8, 32},32) ;
+        result =  binarySearcher.includes(new Integer[]{-1, 1, 2, 8, 4, 5, 4, 8, 32},32) ;
         assertEquals(true, result);
         result =  binarySearcher.includes(new Integer[]{-32, -8, -8, -5, -4, -4, -2, -1, -1},-1) ;
         assertEquals(true, result);
