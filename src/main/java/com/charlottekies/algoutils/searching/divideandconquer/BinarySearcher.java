@@ -14,7 +14,7 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted (not ascii-sorted) Strings.
+     *     Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted (not ascii-sorted) Strings.
      * </p>
      * <p>
      *     Example: cat < Elephant
@@ -32,7 +32,7 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Implements a binary search algorithm to perform a search for a given target in an array of sorted ints.
+     *      Implements a binary search algorithm to perform a search for a given target in an array of sorted ints.
      * </p>
      *
      * @param nums   an array of numbers to search
@@ -47,7 +47,7 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Implements a binary search algorithm to perform a search for a given target in an array of sorted Integers.
+     *      Implements a binary search algorithm to perform a search for a given target in an array of sorted Integers.
      * </p>
      *
      * @param nums   an array of Integers to search
@@ -61,12 +61,12 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Alphabetically sorts and then implements a binary search algorithm to perform a case-sensitive search for a given target in an array unsorted Strings.
-     * Assumes alphabetical sorting ranks capital letters higher than lowercase
+     *      Alphabetically sorts and then implements a binary search algorithm to perform a case-sensitive search for a given target in an array unsorted Strings.
+     *      Assumes alphabetical sorting ranks capital letters higher than lowercase
      * </p>
      * <p>
-     * Example: CAT < Cat < cat
-     * Example: cat < Elephant
+     *      Example: CAT < Cat < cat
+     *      Example: cat < Elephant
      * </p>
      *
      * @param strs   an array of Strings to search
@@ -81,7 +81,7 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of ints.
+     *      Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of ints.
      * </p>
      * <p>
      *      Example: (nums: {1, 4, -5, 1}, target: -5) => true
@@ -100,7 +100,7 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of Integers.
+     *      Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of Integers.
      * </p>
      * <p>
      *      Example: (nums: {1, 4, -5, 1}, target: -5) => true
