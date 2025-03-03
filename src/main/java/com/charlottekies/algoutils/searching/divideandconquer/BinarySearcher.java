@@ -14,10 +14,14 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
+     * Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted (not ascii-sorted) Strings.
+     * </p>
+     * <p>
+     *     Example: cat < Elephant
+     *     Example: CAT < Cat < cat
      * </p>
      *
-     * @param strs   an array o strings to search
+     * @param strs  an array o strings to search
      * @param target the string to search for
      * @return the index of the first-found target if exists, otherwise, -1.
      */
@@ -57,7 +61,12 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
+     * Alphabetically sorts and then implements a binary search algorithm to perform a case-sensitive search for a given target in an array unsorted Strings.
+     * Assumes alphabetical sorting ranks capital letters higher than lowercase
+     * </p>
+     * <p>
+     * Example: CAT < Cat < cat
+     * Example: cat < Elephant
      * </p>
      *
      * @param strs   an array of Strings to search
@@ -72,7 +81,10 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Implements a binary search algorithm to perform a search for a given target in an array of ints.
+     * Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of ints.
+     * </p>
+     * <p>
+     *      Example: (nums: {1, 4, -5, 1}, target: -5) => true
      * </p>
      *
      * @param nums   an array of ints to search
@@ -88,7 +100,10 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     * Implements a binary search algorithm to perform a search for a given target in an array of Integers.
+     * Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of Integers.
+     * </p>
+     * <p>
+     *      Example: (nums: {1, 4, -5, 1}, target: -5) => true
      * </p>
      *
      * @param nums   an array of Integers to search
@@ -111,7 +126,6 @@ public class BinarySearcher extends Searcher {
             if (arr[midpointIndex].compareTo(target) == 0) {
                 return midpointIndex;
             }
-            // if value at midpoint is less than the target
             else if (arr[midpointIndex].compareTo(target) < 0) {
                 lowerSearchIndex = midpointIndex + 1;
             } else {
@@ -131,12 +145,8 @@ public class BinarySearcher extends Searcher {
             if (arr[midpointIndex].compareTo(target) == 0) {
                 return midpointIndex;
             }
-            // if they're the same word but different cases
             else if (arr[midpointIndex].compareToIgnoreCase(target) == 0) {
-                // if we're looking for cat, Cat comes first. So if cat and cat are equal
-                // if arr[mid] is Cat (whcih is less than cat)
                 if (arr[midpointIndex].compareTo(target) < 0) {
-                    // then... "cat" should be, if anywhere, next up (on the right)
                     lowerSearchIndex = midpointIndex + 1;
                 } else {
                     lowerSearchIndex = midpointIndex + 1;
@@ -149,7 +159,6 @@ public class BinarySearcher extends Searcher {
         }
         return -1;
     }
-
 
     private <T extends Comparable<T>> boolean binaryIncludes(T[] arr, T target) {
         int lowerBound = 0;

@@ -48,7 +48,7 @@ public class LinearSearcher extends Searcher {
 
     /**
      * <p>
-     *     Implements a linear search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
+     *     Implements a linear search algorithm to perform a case-sensitive search for a given target in an array of Strings.
      * </p>
      * @param strs an array of Strings to search
      * @param target the String to search for
