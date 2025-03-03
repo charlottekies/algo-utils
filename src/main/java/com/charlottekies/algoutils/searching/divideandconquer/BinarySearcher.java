@@ -17,8 +17,9 @@ public class BinarySearcher extends Searcher {
      *     Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted (not ascii-sorted) Strings.
      * </p>
      * <p>
-     *     Example: cat < Elephant
-     *     Example: CAT < Cat < cat
+     * <p>
+     *     Example: cat &lt Elephant
+     *     Example: CAT &lt Cat &lt cat
      * </p>
      *
      * @param strs  an array o strings to search
@@ -65,8 +66,8 @@ public class BinarySearcher extends Searcher {
      *      Assumes alphabetical sorting ranks capital letters higher than lowercase
      * </p>
      * <p>
-     *      Example: CAT < Cat < cat
-     *      Example: cat < Elephant
+     *      Example: CAT &lt Cat &lt cat
+     *      Example: cat &lt Elephant
      * </p>
      *
      * @param strs   an array of Strings to search
@@ -84,7 +85,7 @@ public class BinarySearcher extends Searcher {
      *      Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of ints.
      * </p>
      * <p>
-     *      Example: (nums: {1, 4, -5, 1}, target: -5) => true
+     *      Example: (nums: {1, 4, -5, 1}, target: -5) =&gt true
      * </p>
      *
      * @param nums   an array of ints to search
@@ -103,7 +104,7 @@ public class BinarySearcher extends Searcher {
      *      Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of Integers.
      * </p>
      * <p>
-     *      Example: (nums: {1, 4, -5, 1}, target: -5) => true
+     *      Example: (nums: {1, 4, -5, 1}, target: -5) =&gt true
      * </p>
      *
      * @param nums   an array of Integers to search
