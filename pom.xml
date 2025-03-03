@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.charlottekies</groupId>
     <artifactId>algoutils</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>jar</packaging>
 
     <name>Algorithm Utilities for Java</name>
@@ -25,7 +25,7 @@
         <url>https://github.com/charlottekies/algo-utils</url>
         <connection>scm:git:git://github.com/charlottekies/algo-utils.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/charlottekies/algo-utils.git</developerConnection>
-        <tag>algoutils-1.0.4</tag>
+        <tag>algoutils-1.0.5</tag>
     </scm>
 
     <issueManagement>
