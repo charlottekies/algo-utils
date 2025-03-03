@@ -56,7 +56,7 @@ public class LinearSearcher extends Searcher {
      */
     @Override
     public boolean includes(String[] strs, String target) {
-        return includes(strs, target);
+        return linearIncludes(strs, target);
     }
 
     /**
@@ -83,7 +83,7 @@ public class LinearSearcher extends Searcher {
      */
     @Override
     public boolean includes(Integer[] nums, Integer target) {
-        return includes(nums, target);
+        return linearIncludes(nums, target);
     }
 
     private <T extends Comparable<T>> int linearSearch(T[] arr, T target) {
