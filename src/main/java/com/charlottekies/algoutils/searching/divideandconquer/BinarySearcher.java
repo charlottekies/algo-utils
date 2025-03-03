@@ -40,7 +40,7 @@ public class BinarySearcher extends Searcher {
      * @return the index of the first-found target if exists, otherwise, -1.
      */
     @Override
-    public Integer search(Integer[] nums, Integer target) {
+    public int search(Integer[] nums, Integer target) {
         return 0;
     }
 
