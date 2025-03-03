@@ -13,14 +13,9 @@ public class BinarySearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *     Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted (not ascii-sorted) Strings.
-     * </p>
-     * <p>
-     * <p>
-     *     Example: cat &lt Elephant
-     *     Example: CAT &lt Cat &lt cat
-     * </p>
+     * <p>Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted (not ascii-sorted) Strings.</p>
+     * <p>Example: cat &lt; Elephant</p>
+     * <p>Example: CAT &lt; Cat &lt; cat</p>
      *
      * @param strs  an array o strings to search
      * @param target the string to search for
@@ -32,9 +27,7 @@ public class BinarySearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *      Implements a binary search algorithm to perform a search for a given target in an array of sorted ints.
-     * </p>
+     * <p> Implements a binary search algorithm to perform a search for a given target in an array of sorted ints.</p>
      *
      * @param nums   an array of numbers to search
      * @param target the number to search for
@@ -47,11 +40,9 @@ public class BinarySearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *      Implements a binary search algorithm to perform a search for a given target in an array of sorted Integers.
-     * </p>
+     * <p>Implements a binary search algorithm to perform a search for a given target in an array of sorted Integers.</p>
      *
-     * @param nums   an array of Integers to search
+     * @param nums an array of Integers to search
      * @param target the Integer to search for
      * @return the index of the first-found target if exists, otherwise, -1.
      */
@@ -61,16 +52,11 @@ public class BinarySearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *      Alphabetically sorts and then implements a binary search algorithm to perform a case-sensitive search for a given target in an array unsorted Strings.
-     *      Assumes alphabetical sorting ranks capital letters higher than lowercase
-     * </p>
-     * <p>
-     *      Example: CAT &lt Cat &lt cat
-     *      Example: cat &lt Elephant
-     * </p>
+     * <p>Alphabetically sorts and then implements a binary search algorithm to perform a case-sensitive search for a given target in an array unsorted Strings. Assumes alphabetical sorting ranks capital letters higher than lowercase</p>
+     * <p> Example: CAT &lt; Cat &lt; cat</p>
+     * <p>Example: cat &lt; Elephant</p>
      *
-     * @param strs   an array of Strings to search
+     * @param strs an array of Strings to search
      * @param target the String to search for
      * @return true if exists, otherwise, false
      */
@@ -81,14 +67,10 @@ public class BinarySearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *      Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of ints.
-     * </p>
-     * <p>
-     *      Example: (nums: {1, 4, -5, 1}, target: -5) =&gt true
-     * </p>
+     * <p>Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of ints.</p>
+     * <p>Example: (nums: {1, 4, -5, 1}, target: -5) =&gt; true</p>
      *
-     * @param nums   an array of ints to search
+     * @param nums  an array of ints to search
      * @param target the int to search for
      * @return true if exists, otherwise, false
      */
@@ -100,12 +82,8 @@ public class BinarySearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *      Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of Integers.
-     * </p>
-     * <p>
-     *      Example: (nums: {1, 4, -5, 1}, target: -5) =&gt true
-     * </p>
+     * <p> Sorts and then implements a binary search algorithm to perform a search for a given target in an unsorted array of Integers.</p>
+     * <p> Example: (nums: {1, 4, -5, 1}, target: -5) =&gt; true </p>
      *
      * @param nums   an array of Integers to search
      * @param target the Integer to search for

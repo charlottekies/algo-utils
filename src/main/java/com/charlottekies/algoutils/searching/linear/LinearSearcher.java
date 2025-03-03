@@ -7,9 +7,7 @@ import java.util.Arrays;
 public class LinearSearcher extends Searcher {
 
     /**
-     * <p>
-     *     Implements a linear search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
-     * </p>
+     * <p>Implements a linear search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.</p>
      * @param strs an array o strings to search
      * @param target the string to search for
      * @return the index of the first-found target if exists, otherwise, -1.
@@ -20,9 +18,7 @@ public class LinearSearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *     Implements a linear search algorithm to perform a search for a given target in an array of ints.
-     * </p>
+     * <p>Implements a linear search algorithm to perform a search for a given target in an array of ints.</p>
      * @param nums an array of int to search
      * @param target the int to search for
      * @return the index of the first-found target if exists, otherwise, -1.
@@ -34,9 +30,7 @@ public class LinearSearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *     Implements a linear search algorithm to perform a search for a given target in an array of Integers.
-     * </p>
+     * <p>Implements a linear search algorithm to perform a search for a given target in an array of Integers.</p>
      * @param nums an array of Integers to search
      * @param target the Integer to search for
      * @return the index of the first-found target if exists, otherwise, -1.
@@ -47,9 +41,7 @@ public class LinearSearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *     Implements a linear search algorithm to perform a case-sensitive search for a given target in an array of Strings.
-     * </p>
+     * <p>Implements a linear search algorithm to perform a case-sensitive search for a given target in an array of Strings.</p>
      * @param strs an array of Strings to search
      * @param target the String to search for
      * @return true if exists, otherwise, false
@@ -60,9 +52,7 @@ public class LinearSearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *     Implements a linear search algorithm to perform a search for a given target in an array of ints.
-     * </p>
+     * <p>Implements a linear search algorithm to perform a search for a given target in an array of ints.</p>
      * @param nums an array of ints to search
      * @param target the int to search for
      * @return true if exists, otherwise, false
@@ -74,9 +64,7 @@ public class LinearSearcher extends Searcher {
     }
 
     /**
-     * <p>
-     *     Implements a linear search algorithm to perform a search for a given target in an array of Integers.
-     * </p>
+     * <p>Implements a linear search algorithm to perform a search for a given target in an array of Integers.</p>
      * @param nums an array of Integers to search
      * @param target the Integer to search for
      * @return true if exists, otherwise, false
