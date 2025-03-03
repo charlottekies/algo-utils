@@ -14,22 +14,24 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     *     Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
+     * Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
      * </p>
-     * @param strs an array o strings to search
+     *
+     * @param strs   an array o strings to search
      * @param target the string to search for
      * @return the index of the first-found target if exists, otherwise, -1.
      */
     @Override
     public int search(String[] strs, String target) {
-        return 0;
+        return binaryStringSearch(strs, target);
     }
 
     /**
      * <p>
-     *     Implements a binary search algorithm to perform a search for a given target in an array of sorted ints.
+     * Implements a binary search algorithm to perform a search for a given target in an array of sorted ints.
      * </p>
-     * @param nums an array of numbers to search
+     *
+     * @param nums   an array of numbers to search
      * @param target the number to search for
      * @return the index of the first-found target if exists, otherwise, -1.
      */
@@ -41,67 +43,117 @@ public class BinarySearcher extends Searcher {
 
     /**
      * <p>
-     *     Implements a binary search algorithm to perform a search for a given target in an array of sorted Integers.
+     * Implements a binary search algorithm to perform a search for a given target in an array of sorted Integers.
      * </p>
-     * @param nums an array of Integers to search
+     *
+     * @param nums   an array of Integers to search
      * @param target the Integer to search for
      * @return the index of the first-found target if exists, otherwise, -1.
      */
     @Override
     public int search(Integer[] nums, Integer target) {
-        return 0;
+        return binarySearch(nums, target);
     }
 
     /**
      * <p>
-     *     Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
+     * Implements a binary search algorithm to perform a case-sensitive search for a given target in an array of alphabetically-sorted Strings.
      * </p>
-     * @param strs an array of Strings to search
+     *
+     * @param strs   an array of Strings to search
      * @param target the String to search for
      * @return true if exists, otherwise, false
      */
     @Override
     public boolean includes(String[] strs, String target) {
-        bubbleSorter.sort(strs);
+        strs = bubbleSorter.sort(strs);
         return binaryIncludes(strs, target);
     }
 
     /**
      * <p>
-     *     Implements a binary search algorithm to perform a search for a given target in an array of ints.
+     * Implements a binary search algorithm to perform a search for a given target in an array of ints.
      * </p>
-     * @param nums an array of ints to search
+     *
+     * @param nums   an array of ints to search
      * @param target the int to search for
      * @return true if exists, otherwise, false
      */
     @Override
     public boolean includes(int[] nums, int target) {
-        bubbleSorter.sort(nums);
+        nums = bubbleSorter.sort(nums);
         Integer[] integerNums = Arrays.stream(nums).boxed().toArray(Integer[]::new);
         return binaryIncludes(integerNums, target);
     }
 
     /**
      * <p>
-     *     Implements a binary search algorithm to perform a search for a given target in an array of Integers.
+     * Implements a binary search algorithm to perform a search for a given target in an array of Integers.
      * </p>
-     * @param nums an array of Integers to search
+     *
+     * @param nums   an array of Integers to search
      * @param target the Integer to search for
      * @return true if exists, otherwise, false
      */
     @Override
     public boolean includes(Integer[] nums, Integer target) {
-        bubbleSorter.sort(nums);
+        nums = bubbleSorter.sort(nums);
         return binaryIncludes(nums, target);
     }
 
     private <T extends Comparable<T>> int binarySearch(T[] arr, T target) {
-        return 0;
+        int lowerSearchIndex = 0;
+        int higherSearchIndex = arr.length - 1;
+
+        while (lowerSearchIndex <= higherSearchIndex) {
+            int midpointIndex = (lowerSearchIndex + higherSearchIndex) / 2; // index = 3, = 6
+
+            if (arr[midpointIndex].compareTo(target) == 0) {
+                return midpointIndex;
+            }
+            // if value at midpoint is less than the target
+            else if (arr[midpointIndex].compareTo(target) < 0) {
+                lowerSearchIndex = midpointIndex + 1;
+            } else {
+                higherSearchIndex = midpointIndex - 1;
+            }
+        }
+        return -1;
     }
+
+    private int binaryStringSearch(String[] arr, String target) {
+        int lowerSearchIndex = 0;
+        int higherSearchIndex = arr.length - 1;
+
+        while (lowerSearchIndex <= higherSearchIndex) {
+            int midpointIndex = (lowerSearchIndex + higherSearchIndex) / 2; // index = 3, = 6
+
+            if (arr[midpointIndex].compareTo(target) == 0) {
+                return midpointIndex;
+            }
+            // if they're the same word but different cases
+            else if (arr[midpointIndex].compareToIgnoreCase(target) == 0) {
+                // if we're looking for cat, Cat comes first. So if cat and cat are equal
+                // if arr[mid] is Cat (whcih is less than cat)
+                if (arr[midpointIndex].compareTo(target) < 0) {
+                    // then... "cat" should be, if anywhere, next up (on the right)
+                    lowerSearchIndex = midpointIndex + 1;
+                } else {
+                    lowerSearchIndex = midpointIndex + 1;
+                }
+            } else if (arr[midpointIndex].compareToIgnoreCase(target) < 0) {
+                lowerSearchIndex = midpointIndex + 1;
+            } else {
+                higherSearchIndex = midpointIndex - 1;
+            }
+        }
+        return -1;
+    }
+
 
     private <T extends Comparable<T>> boolean binaryIncludes(T[] arr, T target) {
         int lowerBound = 0;
-        int upperBound = arr.length-1;
+        int upperBound = arr.length - 1;
 
         while (lowerBound <= upperBound) {
             int midpoint = (lowerBound + upperBound) / 2;
@@ -109,9 +161,9 @@ public class BinarySearcher extends Searcher {
             if (arr[midpoint].compareTo(target) == 0) {
                 return true;
             } else if (arr[midpoint].compareTo(target) < 0) {
-                lowerBound = midpoint+1;
+                lowerBound = midpoint + 1;
             } else {
-                upperBound = midpoint -1;
+                upperBound = midpoint - 1;
             }
         }
         return false;
