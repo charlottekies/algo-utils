@@ -1,5 +1,7 @@
 package com.charlottekies.algoutils.searching.divideandconquer;
 
+import com.charlottekies.algoutils.searching.Searcher;
+
 import java.util.Arrays;
 
 public class BinarySearcher extends Searcher {
@@ -42,6 +44,21 @@ public class BinarySearcher extends Searcher {
     @Override
     public int search(Integer[] nums, Integer target) {
         return 0;
+    }
+
+    @Override
+    public boolean includes(String[] strs, String target) {
+        return false;
+    }
+
+    @Override
+    public boolean includes(int[] nums, int target) {
+        return false;
+    }
+
+    @Override
+    public boolean includes(Integer[] nums, Integer target) {
+        return false;
     }
 
     private <T extends Comparable<T>> int binarySearch(T[] arr, T target) {
