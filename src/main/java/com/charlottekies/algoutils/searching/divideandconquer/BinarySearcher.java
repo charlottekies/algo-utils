@@ -62,7 +62,8 @@ public class BinarySearcher extends Searcher {
      */
     @Override
     public boolean includes(String[] strs, String target) {
-        return false;
+        bubbleSorter.sort(strs);
+        return binaryIncludes(strs, target);
     }
 
     /**
@@ -75,7 +76,9 @@ public class BinarySearcher extends Searcher {
      */
     @Override
     public boolean includes(int[] nums, int target) {
-        return false;
+        bubbleSorter.sort(nums);
+        Integer[] integerNums = Arrays.stream(nums).boxed().toArray(Integer[]::new);
+        return binaryIncludes(integerNums, target);
     }
 
     /**

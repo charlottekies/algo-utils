@@ -58,7 +58,7 @@ class BinarySearcherTest {
         assertEquals(true, binarySearcher.includes(new String[]{"aardvark", "alligator", "animal", "beluga", "billy", "bonobo", "calf", "Cat", "cat"}, "cat"));
         assertEquals(false, binarySearcher.includes(new String[]{"aardvark", "alligator", "animal", "beluga", "billy", "bonobo", "calf", "Cat", "cat"}, "fish"));
         assertEquals(false, binarySearcher.includes(new String[]{}, "cat"));
-        assertEquals(false, binarySearcher.includes(new String[]{"cat", "cat", "cat", "fish", "leopard", "whale", "zebra"}, "cat"));
+        assertEquals(true, binarySearcher.includes(new String[]{"cat", "cat", "cat", "fish", "while", "leopard", "zebra"}, "cat"));
         assertEquals(false, binarySearcher.includes(new String[]{"cat", "cat", "cat", "fish", "leopard", "whale", "zebra"}, ""));
     }
 
@@ -69,7 +69,7 @@ class BinarySearcherTest {
         assertEquals(true, binarySearcher.includes(new int[]{-32, -8, -8, -5, -4, -4, -2, -1, -1}, -1));
         assertEquals(false, binarySearcher.includes(new int[]{-1, 1, 2, 4, 4, 5, 8, 8, 32}, 100));
         assertEquals(false, binarySearcher.includes(new int[]{}, 5));
-        assertEquals(false, binarySearcher.includes(new int[]{-1, 1, 1, 2, 4, 4, 8, 8, 32}, 1));
+        assertEquals(true, binarySearcher.includes(new int[]{-1, 1, 1, 2, 4, 4, 8, 8, 32}, 1));
     }
 
     @Test
