@@ -41,7 +41,7 @@ I intend to increase the number of sorting and searching alogirithms, and expand
 
 # How to Use 
 
-Add the package to your pom or gradle file. This package is listed on [sonatype central repository](https://central.sonatype.com/artifact/io.github.charlottekies/algoutils/overview) repository, as well as github packages.
+Add the package to your pom or gradle file. This package is listed on [sonatype central repository](https://central.sonatype.com/artifact/io.github.charlottekies/algoutils/overview), as well as github packages.
 
 
 For local development, if you include the package from github, you will need to update your maven settings.xml file to include a valid PAT.
