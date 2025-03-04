@@ -41,8 +41,10 @@ I intend to increase the number of sorting and searching alogirithms, and expand
 
 # How to Use 
 
-Add the package to your pom or gradle file. 
-For local development, if you include th package from github, you will need to update your maven settings.xml file to include a valid PAT.
+Add the package to your pom or gradle file. This package is listed on [sonatype central repository](https://central.sonatype.com/artifact/io.github.charlottekies/algoutils/overview) repository, as well as github packages.
+
+
+For local development, if you include the package from github, you will need to update your maven settings.xml file to include a valid PAT.
 1. Generate a github Personal Access Token (PAT) with Appropriate Permissions: 
 * read:packages: Allows you to download packages from GitHub Packages.
 * write:packages: Allows you to upload packages to GitHub Packages (if you want to deploy).
